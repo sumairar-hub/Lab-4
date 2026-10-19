@@ -1,0 +1,272 @@
+
+/* General Styles - Mobile First */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #0F172A;
+    background-color: #f8fafc;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Header - Flexbox */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background-color: #0F172A;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #7dd3fc;
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero Grid - Mobile First */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+/* Hero Spotlight */
+.hero-banner {
+    background-color: #dbeafe;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: bold;
+    color: #0284C7;
+    letter-spacing: 0.5px;
+}
+
+.hero-banner h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 20px 0;
+    max-width: 450px;
+}
+
+.hero-description {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Hero Button */
+.btn-primary {
+    display: inline-block;
+    background-color: #0284C7;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0369a1;
+}
+
+/* Quick Stats Sidebar */
+.hero-sidebar {
+    background-color: #e2e8f0;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.hero-sidebar h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.session-time {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Workshop Section */
+.workshops {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Workshop Gallery - Mobile First */
+.cards-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Cards - Flexbox */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 12px;
+    border-radius: 4px;
+    min-width: 0;
+}
+
+/* Image Placeholders */
+.card-img {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+}
+
+.img-one {
+    background-color: #b8ccdc;
+}
+
+.img-two {
+    background-color: #bfdbfe;
+}
+
+.img-three {
+    background-color: #c7d2fe;
+}
+
+.img-four {
+    background-color: #bae6fd;
+}
+
+/* Card Text */
+.card h3 {
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #475569;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Card Buttons - Flexbox Alignment */
+.btn-card {
+    margin-top: auto;
+    width: 100%;
+    background-color: #0284C7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-card:hover {
+    background-color: #0369a1;
+}
+
+/* Footer - Flexbox */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0F172A;
+    color: white;
+    padding: 20px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+
+    /* Header: Horizontal Flexbox */
+    .site-header {
+        flex-direction: row;
+        align-items: center;
+        padding: 25px 5%;
+    }
+
+    /* Desktop Main Container */
+    .container {
+        padding: 30px 20px;
+    }
+
+    /* Hero: Asymmetric CSS Grid */
+    .hero-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .hero-banner {
+        padding: 30px;
+        min-height: 310px;
+    }
+
+    .hero-sidebar {
+        padding: 30px;
+    }
+
+    /* Workshop Gallery: Responsive Grid */
+    .cards-gallery {
+        grid-template-columns:
+            repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+        min-height: 280px;
+    }
+
+    .site-footer {
+        padding: 25px 5%;
+    }
+}
